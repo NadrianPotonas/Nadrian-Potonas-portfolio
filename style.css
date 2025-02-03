@@ -260,3 +260,32 @@ h1, p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Location & Temperature Styles */
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2d3436; 
+    color: white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.weather-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.weather-container p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #f1f1f1;
+}
