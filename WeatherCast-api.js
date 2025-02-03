@@ -18,8 +18,8 @@ function getLocation() {
     var lng = position.coords.longitude.toString();
     var coordinates = [lat, lng];  
 
-    getCity(coordinates);
-    getWeatherForcast(coordinates);
+    getCityLocation(coordinates);
+    getTemperatureForcast(coordinates);
   }
 
 //Get the location and Temperature 
@@ -28,7 +28,7 @@ function getLocation() {
 };
 
 
-function getCity(coordinates) { 
+function getCityLocation(coordinates) { 
     var xhr = new XMLHttpRequest(); 
     var lat = coordinates[0]; 
     var lng = coordinates[1]; 
@@ -50,7 +50,7 @@ function getCity(coordinates) {
     } 
 }   
 
-function getWeatherForcast(coordinates) { 
+function getTemperatureForcast(coordinates) { 
     var xhr = new XMLHttpRequest(); 
     var lat = coordinates[0]; 
     var lng = coordinates[1]; 
@@ -65,6 +65,7 @@ function getWeatherForcast(coordinates) {
         if (xhr.readyState == 4 && xhr.status == 200) { 
             var response = JSON.parse(xhr.responseText); 
             var temp = response.hourly.temperature_2m;
+            console.log(temp);
             Y.innerHTML= (temp.reduce((total, current) => total + current, 0)/temp.length).toFixed(2)+"°C";
             return temp; 
         } 
