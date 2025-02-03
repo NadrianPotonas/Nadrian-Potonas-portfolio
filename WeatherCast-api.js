@@ -11,8 +11,7 @@ function getLocation() {
   
 
   function showPosition(position) {
-    //x.innerHTML = "Latitude: " + position.coords.latitude + 
-    //"<br>Longitude: " + position.coords.longitude +"<br>Longitude: "+ getCity(coordinates);
+  
 
     var lat =  position.coords.latitude.toString(); 
     var lng = position.coords.longitude.toString();
